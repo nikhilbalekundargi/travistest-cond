@@ -5,6 +5,13 @@ sudo: required
 services:
 - docker
 
+env:
+   global:
+	access_key_id: $accesskey
+        secret_access_key: $secretkey
+        region: $region
+
+
 jobs: 
   include:
     - after_deploy:
@@ -13,9 +20,6 @@ jobs:
 
 	deploy:
   	    provider: elasticbeanstalk
-  	    access_key_id: $accesskey
-  	    secret_access_key: $secretkey
-   	    region: $region
   	    app: $ebapp
   	    env: $ebenv
   	    bucket_name: travistest-eu-west-2-test
