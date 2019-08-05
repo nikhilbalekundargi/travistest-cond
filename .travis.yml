@@ -5,12 +5,6 @@ sudo: required
 services:
 - docker
 
-env:
- global:
-    - access_key_id: $accesskey
-    - secret_access_key: $secretkey
-    - region: $region
-
 jobs:
   include:
     - after_deploy:
@@ -18,8 +12,8 @@ jobs:
     - stage: deploy
       deploy:
           provider: elasticbeanstalk
-	  access_key_id: $accesskey
-	  secret_access_key: $secretkey
+          access_key_id: $accesskey
+          secret_access_key: $secretkey
 	  region: $region
 	  app: $ebapp
           env: $ebenv
