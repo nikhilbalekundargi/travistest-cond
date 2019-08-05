@@ -6,10 +6,10 @@ services:
 - docker
 
 env:
-   global:
-       - access_key_id: $accesskey
-       - secret_access_key: $secretkey
-       - region: $region
+ global:
+    - access_key_id: $accesskey
+    - secret_access_key: $secretkey
+    - region: $region
 
 jobs:
   include:
