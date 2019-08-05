@@ -16,12 +16,11 @@ jobs:
     - after_deploy:
            - echo "done deploying"
     - stage: deploy
-
-        deploy:
-            provider: elasticbeanstalk
-            app: $ebapp
-            env: $ebenv
-            bucket_name: travistest-eu-west-2-test
-            on
-                branch: master
+      deploy:
+          provider: elasticbeanstalk
+          app: $ebapp
+          env: $ebenv
+          bucket_name: travistest-eu-west-2-test
+          on:
+           branch: master
 ~                                                 
