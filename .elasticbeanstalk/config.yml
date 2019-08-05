@@ -1,13 +1,9 @@
 branch-defaults:
-  master:
-    environment: null
-    group_suffix: null
   release-1:
-    environment: travistest-ver
-  stage:
-    environment: null
+    environment: travistest-cond-dev
+    group_suffix: null
 global:
-  application_name: travistest
+  application_name: travistest-cond
   branch: null
   default_ec2_keyname: null
   default_platform: Docker 18.06.1-ce
