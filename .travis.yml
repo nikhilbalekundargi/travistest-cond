@@ -18,8 +18,6 @@ jobs:
     - stage: deploy
       deploy:
           provider: elasticbeanstalk
-          access_key_id: $accesskey
-	  secret_access_key: $secretkey
           region: $region
           app: $ebapp
           env: $ebenv
