@@ -18,7 +18,10 @@ jobs:
     - stage: deploy
       deploy:
           provider: elasticbeanstalk
-          app: $ebapp
+ 	  access_key_id: $accesskey
+          secret_access_key: $secretkey
+          region: $region
+	  app: $ebapp
           env: $ebenv
           bucket_name: travistest-eu-west-2-test
           on:
